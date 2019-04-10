@@ -42,12 +42,13 @@ title('Obiekt inercyjny I rzêdu z opóŸnieniem');
 figure(2);
 t=0:0.05:5;
 dl=length(t);
-LiczbaWykresow=12;
-y=zeros(dl,LiczbaWykresow);
+number=12;
+y=zeros(dl,number);
 n=1;
-while(n<=LiczbaWykresow)
+while(n<=number)
  [licz,mian]=zp2tf([],[-n/4+3*i -n/4-3*i], (n/4)^2+9);
  [y(1:dl,n),x,tt]=step(licz,mian,t);
  n=n+1;
 end
 mesh(t,1:12,y'); 
+title('Wp³yw biegunów na odpowiedŸ skokow¹ uk³adu');
