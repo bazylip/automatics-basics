@@ -7,10 +7,10 @@ alfa = 500;
 c = 400;
 K = 1/c;
 T = sqrt(M/c);
-eps = alfa/(2*sqrt(c*M));
+ksi = alfa/(2*sqrt(c*M));
 
 %ró¿ne formy reprezentacji uk³adu
-licz = [1];
+licz = [0, 0, 1];
 mian = [M alfa c];
 obiekt = tf(licz, mian);
 [z, p, k] = tf2zp(licz, mian);
@@ -31,16 +31,16 @@ ylim([-3 3]);
 
 %%%%%%%%%%%%%%%%%%%
 
-licz = [K];
-mian = [T*T, 2*T*eps, 1];
+licz = [0, 0, K];
+mian = [T*T, 2*T*ksi, 1];   
 figure(4);
 step(licz, mian);
 hold on;
 
 
 alfa = 1500;
-eps = alfa/(2*sqrt(c*M));
-mian = [T*T, 2*T*eps, 1];
+ksi = alfa/(2*sqrt(c*M));
+mian = [T*T, 2*T*ksi, 1];
 step(licz, mian);
 legend('Uk³ad oscylacyjny', 'Uk³ad t³umiony');
 title('Porównanie odpowiedzi skokowych uk³adu oscylacyjnego i t³umionego');
