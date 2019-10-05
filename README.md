@@ -1,2 +1,2 @@
-# automation-basics
-Automation course taken on the university
+# automatics-basics
+Automatics course taken on the university
