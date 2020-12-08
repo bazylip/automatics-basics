@@ -1,2 +1,2 @@
-# automatics-basics
-Automatics course taken on the university
+# control-theory-basics
+Control theory course taken on the university
